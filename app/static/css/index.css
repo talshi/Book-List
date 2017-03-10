@@ -19805,10 +19805,29 @@ md-toolbar {
         height: 100%;
         width: 100%; }
     #book-list .list-container-outer .list-container-inner md-card md-card-content p {
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical; }
+      overflow: hidden; }
+      #book-list .list-container-outer .list-container-inner md-card md-card-content p.line-clamp {
+        position: relative;
+        height: 4.6em; }
+      #book-list .list-container-outer .list-container-inner md-card md-card-content p.line-clamp:after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        height: 1.5em;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%); }
+      @supports (-webkit-line-clamp: 3) {
+        #book-list .list-container-outer .list-container-inner md-card md-card-content p.line-clamp {
+          position: initial;
+          height: initial;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical; }
+        #book-list .list-container-outer .list-container-inner md-card md-card-content p .line-clamp:after {
+          display: none; } }
     #book-list .list-container-outer .list-container-inner md-card md-card-actions {
       justify-content: center; }
 @media (min-width: 600px) {
@@ -19873,7 +19892,7 @@ body .header {
     padding: 0;
     font-size: 46px;
     border-bottom: 2px solid #000;
-    line-height: 0.85;
+    line-height: 0.9;
     text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white; }
   body .header ul.navbar {
     height: 75px;
