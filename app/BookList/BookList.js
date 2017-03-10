@@ -50,7 +50,6 @@ angular.module('myApp.BookList', ['ngRoute'])
         };
 
         $scope.removeBook = function(ev, index) {
-          console.log(index);
             var confirm = $mdDialog.confirm()
                 .title('Are you sure you want to remove this book?')
                 .textContent('You cannot undo this operation.')
@@ -139,7 +138,6 @@ angular.module('myApp.BookList', ['ngRoute'])
       });
       splitted = splitted.join(' ');
       tmp.title = splitted;
-      console.log(splitted);
       filteredBooks.push(tmp)
     });
     return filteredBooks;
