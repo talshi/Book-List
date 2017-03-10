@@ -1,0 +1,39 @@
+.welcome {
+  width: 100%;
+  text-align: center;
+  color: #000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+  position: relative; }
+  .welcome h1 {
+    font-size: 48px;
+    font-weight: 700; }
+  .welcome:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100vh - 82px);
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url("../img/background.jpeg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: fixed;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover; }
+
+.next-button {
+  z-index: 10; }
+  .next-button a {
+    padding: 5px 25px; }
+
+/*# sourceMappingURL=home.css.map */

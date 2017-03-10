@@ -1,0 +1,31 @@
+<section id="book-list">
+    <div class="control-bar">
+        <md-button class="md-button md-raised" ng-click="addBook($event)">Add Book</md-button>
+    </div>
+    <div class="list-container-outer">
+        <div class="list-container-inner">
+            <div class="card-container" ng-repeat="book in books | parseTitle">
+                <md-card>
+                    <img ng-src="{{book.img}}" class="md-card-image" alt="Washed Out">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{book.title}}</span>
+                            <span class="md-subhead">{{book.author}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <p>{{book.summary}}</p>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button class="md-icon-button" aria-label="Edit" ng-click="editBook($event, book)">
+                            <md-icon md-svg-icon="../static/img/ic_mode_edit_blue_24px.svg"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Remove" ng-click="removeBook(ev, $index)">
+                            <md-icon md-svg-icon="../static/img/ic_delete_red_24px.svg"></md-icon>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </div>
+    </div>
+</section>

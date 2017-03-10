@@ -1,0 +1,26 @@
+md-dialog {
+  max-height: 85%; }
+  md-dialog md-dialog-content {
+    min-height: 350px;
+    min-width: 300px; }
+    md-dialog md-dialog-content .md-dialog-content {
+      width: 500px;
+      min-height: 350px;
+      height: 100%; }
+      md-dialog md-dialog-content .md-dialog-content #book-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 250px; }
+        md-dialog md-dialog-content .md-dialog-content #book-details input {
+          padding: 5px;
+          border: none;
+          border-bottom: 1px solid #d0d0d0; }
+        md-dialog md-dialog-content .md-dialog-content #book-details textarea {
+          padding: 5px;
+          width: 80%;
+          height: 100px;
+          resize: none; }
+
+/*# sourceMappingURL=add-book.css.map */

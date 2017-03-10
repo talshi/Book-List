@@ -1,0 +1,54 @@
+#book-list {
+  .control-bar {
+    width: 100%;
+  }
+  .list-container-outer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .list-container-inner {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      .card-container {
+        display: flex;
+        flex: 1 1 20%;
+        box-sizing: border-box;
+        min-width: 300px;
+        height: 575px;
+        .md-card-image {
+          max-height: 285px;
+          max-width: 195px;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      md-card {
+        //width: 400px;
+        md-card-content {
+          p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+        }
+        md-card-actions {
+          justify-content: center;
+        }
+
+      }
+    }
+
+  }
+
+  @media (min-width: 600px) {
+    .card-container {
+      max-width: 33%;
+      max-height: 100%;
+    }
+  }
+}
+
