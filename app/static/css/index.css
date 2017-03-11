@@ -19884,17 +19884,11 @@ body .header {
   top: 0;
   left: 0;
   height: 75px; }
-  body .header .logo {
-    width: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 15px;
-    padding: 0;
-    font-size: 46px;
-    border-bottom: 2px solid #000;
-    line-height: 0.9;
-    text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white; }
+  body .header .logo-container {
+    padding: 0 15px;
+    margin-top: 5px; }
+    body .header .logo-container .logo {
+      width: 250px; }
   body .header ul.navbar {
     height: 75px;
     list-style-type: none;

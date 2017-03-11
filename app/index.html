@@ -20,9 +20,9 @@
 </head>
 <body ng-controller="AppCtrl">
 <div class="header">
-  <div class="logo">My Books List</div>
+  <!--<div class="logo">My Books List</div>-->
+  <div class="logo-container"><img src="static/img/logo.png" alt="My Books List" class="logo" /></div>
   <ul class="navbar">
-
     <li ng-click="$parent.currentTab='home'" ng-class="{'active' : $parent.currentTab == 'home'}"><a href="#!/Home">Home</a></li>
     <li ng-click="$parent.currentTab='book-list'" ng-class="{'active' : $parent.currentTab == 'book-list'}"><a href="#!/BookList">Book List</a></li>
     <li ng-click="$parent.currentTab='contact'" ng-class="{'active' : $parent.currentTab == 'contact'}"><a href="#!/Contact">Contact</a></li>
