@@ -4,7 +4,7 @@
       <div class="md-toolbar-tools">
         <h2>Add Book</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
+        <md-button class="md-icon-button" ng-click="vm.cancel()">
           <md-icon md-svg-src="../static/img/ic_close_white_24px.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
@@ -13,16 +13,16 @@
     <md-dialog-content>
       <div class="md-dialog-content">
         <ng-form id="book-details">
-            <input type="text" ng-model="book.title" placeholder="Book's Name" />
-            <input type="text" ng-model="book.author" placeholder="Book's Author" />
-            <input type="year" ng-model="book.date" placeholder="Year of publish (YYYY)" />
-            <textarea ng-model="book.summary" placeholder="Summary"></textarea>
+            <input type="text" ng-model="vm.book.title" placeholder="Book's Name" />
+            <input type="text" ng-model="vm.book.author" placeholder="Book's Author" />
+            <input type="year" ng-model="vm.book.date" placeholder="Year of publish (YYYY)" />
+            <textarea ng-model="vm.book.summary" placeholder="Summary"></textarea>
         </ng-form>
       </div>
     </md-dialog-content>
 
     <md-dialog-actions layout="row">
-        <md-button class="md-button" ng-click="saveBook($event)" ng-if="!editMode">Save Book</md-button>
+        <md-button class="md-button" ng-click="vm.saveBook($event)" ng-if="!vm.editMode">Save Book</md-button>
     </md-dialog-actions>
   </form>
 </md-dialog>

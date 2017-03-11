@@ -19826,8 +19826,8 @@ md-toolbar {
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical; }
-        #book-list .list-container-outer .list-container-inner md-card md-card-content p .line-clamp:after {
-          display: none; } }
+        #book-list .list-container-outer .list-container-inner md-card md-card-content p.line-clamp:after {
+          display: none !important; } }
     #book-list .list-container-outer .list-container-inner md-card md-card-actions {
       justify-content: center; }
 @media (min-width: 600px) {
@@ -19882,7 +19882,8 @@ body .header {
   width: 100%;
   z-index: 10;
   top: 0;
-  left: 0; }
+  left: 0;
+  height: 75px; }
   body .header .logo {
     width: 240px;
     display: flex;
@@ -19922,6 +19923,12 @@ body .header {
         border-bottom: 2px solid #5383d1; }
         body .header ul.navbar li.active a {
           color: #5383d1; }
+body md-menu .md-button.md-icon-button {
+  height: 75px;
+  width: 75px; }
+  body md-menu .md-button.md-icon-button md-icon {
+    width: 36px;
+    height: 36px; }
 body #home, body #book-list, body #contact {
   position: relative;
   top: 66px;
@@ -19935,5 +19942,18 @@ body md-dialog-content .md-title {
   font-size: 28px; }
 body md-dialog-content .md-dialog-content-body p {
   font-size: 20px; }
+
+@media (min-width: 640px) {
+  .mobile-menu {
+    display: none; } }
+@media (max-width: 640px) {
+  ul.navbar {
+    display: none !important; }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0; } }
 
 /*# sourceMappingURL=index.css.map */

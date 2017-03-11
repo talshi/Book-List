@@ -24,9 +24,39 @@
   <ul class="navbar">
 
     <li ng-click="$parent.currentTab='home'" ng-class="{'active' : $parent.currentTab == 'home'}"><a href="#!/Home">Home</a></li>
-    <li ng-click="$parent.currentTab='book-list'" ng-class="{'active' : $parent.currentTab == 'book-list'}"><a href="#!/BookList">BookList</a></li>
+    <li ng-click="$parent.currentTab='book-list'" ng-class="{'active' : $parent.currentTab == 'book-list'}"><a href="#!/BookList">Book List</a></li>
     <li ng-click="$parent.currentTab='contact'" ng-class="{'active' : $parent.currentTab == 'contact'}"><a href="#!/Contact">Contact</a></li>
   </ul>
+  <div class="mobile-menu">
+    <md-menu md-position-mode="target-right target">
+      <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdMenu.open($event)">
+        <md-icon md-menu-origin md-svg-icon="../static/img/ic_menu_black_24px.svg"></md-icon>
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <a href="#!/Home" class="md-button">
+              <div layout="row" flex>
+                <p flex>Home</p>
+              </div>
+          </a>
+        </md-menu-item>
+        <md-menu-item>
+          <a href="#!/BookList" class="md-button">
+              <div layout="row" flex>
+                <p flex>Book List</p>
+              </div>
+          </a>
+        </md-menu-item>
+        <md-menu-item>
+          <a href="#!/Contact" class="md-button">
+              <div layout="row" flex>
+                <p flex>Contact</p>
+              </div>
+          </a>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+  </div>
 </div>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

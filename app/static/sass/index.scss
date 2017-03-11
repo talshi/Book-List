@@ -20,6 +20,7 @@ body {
     z-index: 10;
     top: 0;
     left: 0;
+    height: 75px;
     .logo {
       width: 240px;
       display: flex;
@@ -81,6 +82,19 @@ body {
     }
   }
 
+  md-menu {
+    .md-button {
+      &.md-icon-button {
+        height: 75px;
+        width: 75px;
+        md-icon {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+
   #home, #book-list, #contact {
     position: relative;
     top: 66px;
@@ -105,5 +119,25 @@ body {
         }
       }
     }
+  }
+}
+
+@media (min-width:640px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width:640px) {
+  ul {
+    &.navbar {
+      display: none!important;
+    }
+  }
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
